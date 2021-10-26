@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/bnv_home"
+        android:title="홈"
+        android:icon="@drawable/ic_bnv_home"/>
+
+    <item android:id="@+id/bnv_aaa"
+        android:title="글쓰기"
+        android:icon="@drawable/ic_baseline_add_24"/>
+
+    <item android:id="@+id/bnv_group"
+        android:title="채팅"
+        android:icon="@drawable/ic_bnv_group"/>
+
+    <item android:id="@+id/bnv_map1"
+        android:title="지도"
+        android:icon="@drawable/ic_bnv_map1"/>
+
+
+
+
+
+
+</menu>
