@@ -75,7 +75,7 @@ public class HomeFragment extends Fragment {
         new Thread(){
             @Override
             public void run() {
-                String serverUrl="http://whatzoo.dothome.co.kr/aaa/loadDB.php";
+                String serverUrl="http://whatzoo.dothome.co.kr/asdfasdf/loadDB.php";
 
                 try {
                     URL url=new URL(serverUrl);
@@ -108,17 +108,18 @@ public class HomeFragment extends Fragment {
                     String[] rows=data.split("@");
                     for (String row : rows){
                         String[] datas=row.split("&");
-                        if (datas.length!=4) continue;
+                        if (datas.length!=5) continue;
 
                         int no=Integer.parseInt(datas[0]);
                         String title=datas[1];
                         String msg=datas[2];
                         String date=datas[3];
+                        String place=datas[4];
 
                         getActivity().runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
-                                Item item=new Item(no,title,msg,date);
+                                Item item=new Item(no,title,msg,date,place);
                                 items.add(0,item);
                                 cccAdapter.notifyItemInserted(0);
                             }

@@ -7,4 +7,7 @@ public class G {
     public static String email;
     public static String profileUrl;
 
+
+    public static String addr="";
+
 }

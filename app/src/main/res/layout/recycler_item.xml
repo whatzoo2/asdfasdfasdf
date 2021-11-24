@@ -48,13 +48,34 @@
         <TextView
             android:id="@+id/tv_msg"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="80dp"
             android:text="MESSAGE"
             android:textColor="#FF333333"
             android:layout_below="@id/tv_title"
             android:layout_marginTop="8dp"
             android:textStyle="bold"
             android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_msg"
+            android:text="지역 :"
+            android:textSize="20sp"
+            android:textColor="#FF333333"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="한양대학교 싸공 앞"
+            android:layout_below="@id/tv_msg"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FF333333"/>
 
     </RelativeLayout>
 

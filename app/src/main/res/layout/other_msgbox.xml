@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="nick name"
+        android:layout_toRightOf="@id/iv"
+        android:layout_marginLeft="16dp"
+        android:textColor="#FF333333"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="안녕하세요. 배가고프네요"
+        android:layout_below="@id/tv_name"
+        android:layout_alignLeft="@id/tv_name"
+        android:textStyle="bold"
+        android:textColor="#FF333333"
+        android:background="@drawable/bg_othermsgbox"
+        android:padding="12dp"
+        android:maxWidth="250dp"/>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="13 : 43"
+        android:layout_toRightOf="@id/tv_message"
+        android:layout_alignBottom="@id/tv_message"
+        android:layout_marginLeft="8dp"
+        android:textSize="12sp"/>
+
+
+</RelativeLayout>

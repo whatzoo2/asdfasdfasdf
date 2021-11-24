@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "103295987432",
+    "project_id": "chattiongsh",
+    "storage_bucket": "chattiongsh.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:103295987432:android:09c480c9a29e476f78235d",
+        "android_client_info": {
+          "package_name": "com.gsh91.asdfasdfasdf"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "103295987432-k8eou4cvt4duobq1re13bpc9q657mimj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxOtBaikA1tBVWY_-ABO1IIMMdHH-RG3I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "103295987432-k8eou4cvt4duobq1re13bpc9q657mimj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

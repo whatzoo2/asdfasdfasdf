@@ -43,8 +43,7 @@ public class CCC extends RecyclerView.Adapter {
         vh.tvDate.setText(item.date);
         vh.tvTitle.setText(item.title);
         vh.tvMsg.setText(item.msg);
-
-
+        vh.tvPlace.setText(item.place);
     }
 
     @Override
@@ -58,6 +57,7 @@ public class CCC extends RecyclerView.Adapter {
         TextView tvTitle;
         TextView tvMsg;
         TextView tvDate;
+        TextView tvPlace;
 
         public VH(@NonNull View itemView) {
             super(itemView);
@@ -66,6 +66,20 @@ public class CCC extends RecyclerView.Adapter {
             tvTitle=itemView.findViewById(R.id.tv_title);
             tvMsg=itemView.findViewById(R.id.tv_msg);
             tvDate=itemView.findViewById(R.id.tv_date);
+            tvPlace=itemView.findViewById(R.id.tv_place);
+
+            tvPlace.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int pos=getAdapterPosition();
+                    G.addr= items.get(pos).place;
+
+                    MainActivity mainActivity=(MainActivity) context;
+                    mainActivity.bnv.setSelectedItemId(R.id.bnv_map1);
+
+                }
+            });
+
         }
     }
 

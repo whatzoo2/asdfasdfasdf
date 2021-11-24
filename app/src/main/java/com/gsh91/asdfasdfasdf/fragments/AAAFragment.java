@@ -31,7 +31,9 @@ public class AAAFragment extends Fragment {
     private View view;
     private EditText editTitle;
     private EditText editMsg;
+    private EditText editPlace;
     private Button btn;
+    Map1Fragment fmMap;
 
     @Nullable
     @Override
@@ -41,6 +43,10 @@ public class AAAFragment extends Fragment {
         editTitle=view.findViewById(R.id.et_title);
         editMsg=view.findViewById(R.id.et_msg);
         btn=view.findViewById(R.id.btn_save);
+        editPlace=view.findViewById(R.id.et_place);
+        fmMap=new Map1Fragment();
+
+
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,8 +58,9 @@ public class AAAFragment extends Fragment {
                     public void run() {
                         String title=editTitle.getText().toString();
                         String msg=editMsg.getText().toString();
+                        String place=editPlace.getText().toString();
 
-                        String serverUrl="http://whatzoo.dothome.co.kr/aaa/insertDB.php";
+                        String serverUrl="http://whatzoo.dothome.co.kr/asdfasdf/insertDB.php";
 
                         try {
                             URL url=new URL(serverUrl);
@@ -64,7 +71,7 @@ public class AAAFragment extends Fragment {
                             connection.setDoOutput(true);
                             connection.setUseCaches(false);
 
-                            String data="title="+title+"&msg="+msg;
+                            String data="title="+title+"&msg="+msg+"&place="+place;
                             OutputStream os=connection.getOutputStream();
                             OutputStreamWriter writer=new OutputStreamWriter(os);
                             writer.write(data,0,data.length());
@@ -89,20 +96,10 @@ public class AAAFragment extends Fragment {
                                     MainActivity ac=(MainActivity) getActivity();
                                     ac.bnv.setSelectedItemId(R.id.bnv_home);
 
-                                    Toast.makeText(getActivity(), ""+buffer.toString(), Toast.LENGTH_SHORT).show();
+//                                    Toast.makeText(getActivity(), ""+buffer.toString(), Toast.LENGTH_SHORT).show();
 
                                 }
                             });
-
-
-
-
-
-
-
-
-
-
 
                         } catch (MalformedURLException e) {
                             e.printStackTrace();
@@ -125,4 +122,9 @@ public class AAAFragment extends Fragment {
 
         return view;
     }
+
+
+
+
+
 }
