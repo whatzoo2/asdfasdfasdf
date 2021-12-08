@@ -96,9 +96,11 @@ public class GroupFragment extends Fragment {
                 }else{
                     Intent intent=new Intent(getActivity(),ChattingActivity.class);
                     startActivity(intent);
+
+                    Toast.makeText(getActivity(), "반갑습니다. 매너채팅 해주세요.", Toast.LENGTH_LONG).show();
                 }
 
-                Toast.makeText(getActivity(), "반갑습니다. 매너채팅 해주세요.", Toast.LENGTH_LONG).show();
+
             }
         });
 
@@ -128,7 +130,10 @@ public class GroupFragment extends Fragment {
 
         GG.nickName=et.getText().toString();
 
-        if (imgUri==null) return;
+        if (GG.nickName.equals("") || imgUri==null){
+            Toast.makeText(getActivity(), "닉네임과 프로필사진을 설정하지 않으면 입장하실 수 없습니다.", Toast.LENGTH_SHORT).show();
+            return;
+        }
 
         SimpleDateFormat sdf=new SimpleDateFormat("yyyyMMddhhmmss");
         String fileName="IMG_"+sdf.format(new Date())+".png";

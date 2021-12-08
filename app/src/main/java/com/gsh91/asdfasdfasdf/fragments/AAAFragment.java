@@ -96,7 +96,9 @@ public class AAAFragment extends Fragment {
                                     MainActivity ac=(MainActivity) getActivity();
                                     ac.bnv.setSelectedItemId(R.id.bnv_home);
 
-//                                    Toast.makeText(getActivity(), ""+buffer.toString(), Toast.LENGTH_SHORT).show();
+                                    editTitle.setText("");
+                                    editMsg.setText("");
+                                    editPlace.setText("");
 
                                 }
                             });
